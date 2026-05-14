@@ -1,0 +1,44 @@
+{
+  "name": "front-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for Front API integration - read-only access to conversations, contacts, and messages",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "front-mcp-server": "build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Precision-Fuel-Hydration/front-mcp-server.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "front",
+    "frontapp",
+    "claude",
+    "ai"
+  ],
+  "author": "James Phillips",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
